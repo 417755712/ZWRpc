@@ -1,0 +1,18 @@
+协议版本0.1
+1、length:  4个字节 int,标识后续报文的长度
+2、magicNumber:  4个字节 hex 固定为0X5A577A77
+3、protoVersion:  2个字节,raw Byte0表示主版本号,Byte1表示辅版本号 如: 0x0001代表版本0.1
+4、msgType: 1个字节  byte 0:同步业务请求消息  1:同步业务响应消息(客户端专用)  2:业务ONE-WAY消息(协议异步请求,不需要应答)  3:心跳请求消息
+5、serializationOption: 1个字节  byte 消息体序列化方式 0x00:protobuf 0x01:json
+6、serviceId: 2个字节 byte 服务ID short 调用具体服务方法的id
+7、serviceVersion: 1个字节 byte 服务版本号 byte 
+8、requestId: 4个字节 int 客户端requestId
+9、encryptionKeyIndex: 1个字节  byte 加密秘钥索引,从1开始 如果不加密 固定为0x00.只对数据体进行加密
+10、algorithmIndicator: 1个字节 byte 算法标识,从1开始 0x01: 3DES 如果不加密,固定为0x00.只对数据体进行加密
+// 共 21个字节
+11、data 数据体
+
+
+
+如果需要追求最大化的性能，需要优化:
+自己编写消息头字段,现在用的netty自带的框架涉嫌多一次arraycopy
