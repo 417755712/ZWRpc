@@ -23,6 +23,8 @@ basic协议说明：
 11、data 数据体
 
 目前服务端的启动上下文类为：com.rpc.zw.netty.context.RPCServerContext
+服务器所需的最少jar包也在RPCServer项目的lib下面，如果您想试试项目的话，在把build成jar包的时候，不要把现在RPCServer项目的jar包打进去，把这些jar包放在外层项目里。
 并且服务端不支持一个进程内用此程序监听两个端口！会抛异常。
 后续会继续开发客户端，会增加一些新特性，并且会把结构图补上。
 ~继续码代码去了
+ 
