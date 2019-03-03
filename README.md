@@ -19,7 +19,7 @@ basic协议说明：
 8、requestId: 4个字节 int 客户端requestId  
 9、encryptionKeyIndex: 1个字节  byte 加密秘钥索引,从1开始 如果不加密 固定为0x00.只对数据体进行加密  
 10、algorithmIndicator: 1个字节 byte 算法标识,从1开始 0x01: 3DES 如果不加密,固定为0x00.只对数据体进行加密  
-11、responseCode:1个字节 byte 应答code 从0开始 0:业务处理成功 1:业务处理失败   发送方此标识默认为0
+11、responseCode:1个字节 byte 应答code 从0开始 0:业务处理成功 1:业务处理失败   发送方此标识默认为0  
 // 共 22个字节  
 12、data 数据体  
   
