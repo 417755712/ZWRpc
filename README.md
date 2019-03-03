@@ -1,8 +1,8 @@
-# ZWRpc
+# ZWRpc 1
 作者说明：这个项目纯属作为本人兴趣爱好的练手型项目,会不定期更新。现在项目只开发了服务端，而且服务端目前只实现了一些基础功能(粘包拆包，二进制的私有协议解析，心跳，前置过滤器，路由，后置过滤器...)，整个项目的拓展性设计还没有做，并且没怎么测试...后续我会继续开发。  
 
 ZWRpc是一个基于java语言和netty+spring框架的一个RPC通讯框架。  
-整个项目包含ServerStub和ClientStub(目前只开发了Server版本)  
+整个项目包含ServerStub和ClientStub(目前只开发了Server版本)   
   
 basic协议说明：  
 1、所有byte[]转int/shot均是高位在前  
