@@ -9,6 +9,6 @@ public class ServerTest {
 	public static void main(String[] args) throws Exception {
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext-test.xml");
 		RPCServerContext context = new RPCServerContext();
-		context.serverStart(ctx, 80);
+		context.serverStart(ctx, 88);
 	}
 }
