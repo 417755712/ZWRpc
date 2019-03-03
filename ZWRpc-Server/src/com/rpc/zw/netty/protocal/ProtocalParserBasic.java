@@ -50,6 +50,9 @@ public class ProtocalParserBasic extends AbstractParser {
 		byte algorithm = getByte(data, subscript);
 		subscript += 1;
 
+		// byte responseCode = getByte(data, subscript); 服务端用不到此协议头,直接跳过
+		subscript += 1;
+
 		// 报文体
 		int contentLength = data.length - subscript;
 		byte[] content = null;

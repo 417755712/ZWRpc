@@ -66,6 +66,10 @@ public class ProtocalBuilderBasic extends AbstractBuilder {
 		putByte(data, response.getAlgorithmIndicator(), subscript);
 		subscript += 1;
 
+		// responseCode
+		putByte(data, response.getResponseCode(), subscript);
+		subscript += 1;
+
 		// data
 		if (data.length >= subscript) {
 			putByteArr(data, content, subscript);

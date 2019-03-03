@@ -9,6 +9,8 @@ public class ServiceResponse {
 	private byte algorithmIndicator = (byte) 0x00;
 
 	private byte[] data;
+	// 应答标识 0:成功 1:失败
+	private byte responseCode = (byte) 0x00;
 
 	public void setSerializeJson() {
 		this.serializationOption = (byte) 0x01;
@@ -36,5 +38,13 @@ public class ServiceResponse {
 
 	public byte[] getData() {
 		return data;
+	}
+
+	public byte getResponseCode() {
+		return responseCode;
+	}
+
+	public void setResponseCode(byte responseCode) {
+		this.responseCode = responseCode;
 	}
 }
